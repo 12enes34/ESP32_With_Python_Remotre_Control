@@ -211,8 +211,7 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
-## English Section <a id="english-section"></a>
+<h1 align="center" style="font-size: 62px;" id="english-section">ENGLISH</h1>
 
 
 # ESP32 Web Server and Motor Control Project ESP32 Codes
