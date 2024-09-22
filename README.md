@@ -94,3 +94,78 @@ Buzzer ile çalınan melodi, pitches.h dosyasında tanımlanan nota frekansları
 Buzzer, farklı melodilerle kullanıcılara sesli geri bildirim sağlar.
 
 
+
+
+
+
+# ESP32 Web Server ve Motor Kontrol Projesi Python Kodları (Kontrolcü)
+
+ESP tabanlı bir sistem ile motorları klavye veya joystick aracılığıyla kontrol eder.
+Şu an desteklenen joystick Logitech EXTREME 3D PRO.
+Proje, `requests`, `keyboard`, `pygame`, ve `threading` kütüphanelerini kullanarak ESP cihazına komutlar gönderir.
+
+## Gereksinimler
+
+Bu projeyi çalıştırabilmek için aşağıdaki yazılımların ve kütüphanelerin yüklü olması gerekmektedir:
+
+- Python 3.x
+- `requests` kütüphanesi
+- `keyboard` kütüphanesi
+- `pygame` kütüphanesi
+
+Gerekli kütüphaneleri yüklemek için aşağıdaki komutları kullanabilirsiniz:
+
+```bash
+pip install requests
+pip install keyboard
+pip install pygame
+```
+
+## Fonksiyonlar
+
+  ### Motor Kontrol Fonksiyonları
+  
+    - control_left_motor(rotation, speed): Sol motoru kontrol eder.
+    - control_right_motor(rotation, speed): Sağ motoru kontrol eder.
+    - back_and_forth(rotation, speed): Motoru ileri geri hareket ettirir.
+    - g_turn(rotation, speed): Motoru sağa veya sola döndürür.
+    - control_upper_motor(rotation, speed): Üst motoru kontrol eder.
+    - control_right_left_motor(right_motor_pwm, left_motor_pwm, rotation): Sağ ve sol motorları aynı anda kontrol eder.
+    - control_right_left_motor_with_rotations(right_motor_pwm, left_motor_pwm, RightRotation, LeftRotation): Sağ ve sol motorları farklı yön ve hızlarda kontrol eder.
+
+
+### Ekstra Fonksiyonlar
+    - measure_distance(): Mesafe ölçümü yapar.
+    - play_buzzer(): Buzzer melodisini çaldırır.
+
+
+## Klavye ile Motor Kontrolü
+    - t: İleri hareket.
+    - s: Geri hareket.
+    - d: Sol dönüş.
+    - a: Sağ dönüş.
+    - e: Sağ motoru çalıştırır.
+    - q: Sol motoru çalıştırır.
+    - m: Mesafe ölçümü yapar.
+    - b: Buzzer'ı çaldırır.
+    - r: İleri hızlı hareket.
+    - f: Motoru durdurur.
+    - z: Programdan çıkar. 
+
+## Joystick ile Motor Kontrolü
+Joystick kullanılarak motor kontrolü de sağlanabilir. 
+Joystick'in eksen ve butonları kullanılarak motorlara komut gönderilebilir.
+
+# Kullanım
+1 - ESP 32 ile bilgisayarinizi ayni ağa bağlayın.
+2 - Kodun başındaki esp_ip ve esp_port değişkenlerini ESP cihazınızın IP adresi ve port numarasına göre düzenleyin.
+3 - Esp32KontrolcuV3_With_joystick.py dosyasını çalıştırın
+4 - Joystick kullanmak istiyorsanız, joystick'i bağlayın ve Thread içinde ki fonksiyonu control_motors_with_joystick ile değiştirin.
+    klavyeden kontrol etmek istiyorsanız fonksiyonu control_motors_with_keyboard ile değiştirin
+```bash
+  if __name__ == '__main__':
+    motor_thread = Thread(target=control_motors_with_joystick)
+    motor_thread.start()
+    motor_thread.join()
+```
+program çalışırken joystick ile motorları kontrol edebilirsiniz.
