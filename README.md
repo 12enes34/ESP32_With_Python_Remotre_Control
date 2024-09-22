@@ -178,7 +178,7 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
   Joystick i ne kadar ileri iter veya geri çekerseniz motorlara o kadar çok güç gönderebilirsiniz.
 
 
-![Logitech EXTREME 3D PRO JOYSTICK IMAGE](fotoğraf-dizini/fotograf.png)
+![Logitech EXTREME 3D PRO JOYSTICK IMAGE](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Logitech%20Extreme%203D%20Pro.jpg)
 
 
 
