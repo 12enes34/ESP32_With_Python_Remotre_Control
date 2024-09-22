@@ -9,6 +9,9 @@
   - Ultrasonik mesafe sensörü
   - Buzzer
 
+## Nasıl Çalışıyor:
+  Python kodu üzerinden web soket haberleşme ile gönderilen bilgileri alarak ve bu bilgileri işleyerek geerekli komutu çalıştırır ve işler.
+
 ## Donanım Gereksinimleri
 
 ### Malzemeler
@@ -48,8 +51,8 @@
 1. **Wi-Fi Ayarları**: `ssid` ve `password` değişkenlerini kendi ağınıza göre düzenleyin:
 
    ```cpp
-   const char* ssid = "Tulpar";      // Wi-Fi adı
-   const char* password = "12345687"; // Wi-Fi şifresi
+   const char* ssid = "WifiAdı";      // Wi-Fi adı
+   const char* password = "Şifre"; // Wi-Fi şifresi
    ```
 
 2. **Kütüphaneleri Yükleyin**:
