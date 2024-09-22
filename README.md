@@ -173,7 +173,7 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
 # Joystick kullanımı:
   Joystick kolunun altında bulunan gaz açma joystick i ile aracın max hızını belirleyebilirsiniz.
   
-  Üzerinde bulunan 1 numaralı tuş ile upper motoru yukarı yönde çalıştırabilirsiniz 2 ile de aşşa yönde çalıştırabilirsiniz.
+  Üzerinde bulunan 1 numaralı tuş ile upper motoru yukarı yönde çalıştırabilirsiniz 2 ile de aşağı yönde çalıştırabilirsiniz.
   
   Joystick'i ne kadar ileri iter veya geri çekerseniz motorlara o kadar çok güç gönderebilirsiniz.
 
