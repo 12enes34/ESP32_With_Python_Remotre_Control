@@ -157,10 +157,10 @@ Joystick kullanılarak motor kontrolü de sağlanabilir.
 Joystick'in eksen ve butonları kullanılarak motorlara komut gönderilebilir.
 
 # Kullanım
-1 - ESP 32 ile bilgisayarinizi ayni ağa bağlayın.
-2 - Kodun başındaki esp_ip ve esp_port değişkenlerini ESP cihazınızın IP adresi ve port numarasına göre düzenleyin.
-3 - Esp32KontrolcuV3_With_joystick.py dosyasını çalıştırın
-4 - Joystick kullanmak istiyorsanız, joystick'i bağlayın ve Thread içinde ki fonksiyonu control_motors_with_joystick ile değiştirin.
+- 1 ESP 32 ile bilgisayarinizi ayni ağa bağlayın.
+- 2 Kodun başındaki esp_ip ve esp_port değişkenlerini ESP cihazınızın IP adresi ve port numarasına göre düzenleyin.
+- 3 Esp32KontrolcuV3_With_joystick.py dosyasını çalıştırın
+- 4 Joystick kullanmak istiyorsanız, joystick'i bağlayın ve Thread içinde ki fonksiyonu control_motors_with_joystick ile değiştirin.
     klavyeden kontrol etmek istiyorsanız fonksiyonu control_motors_with_keyboard ile değiştirin
 ```bash
   if __name__ == '__main__':
