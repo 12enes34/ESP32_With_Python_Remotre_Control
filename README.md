@@ -1,3 +1,9 @@
+# README in Two Languages: ESP32 Web Server and Motor Control Project ESP32 Codes
+
+- [Türkçe Bölüm](#turkce-bolum)
+- [English Section](#english-section)
+
+## Türkçe Bölüm <a id="turkce-bolum"></a>
 # ESP32 Web Server ve Motor Kontrol Projesi ESP32 Kodları
 
 ## Proje Özeti
@@ -191,6 +197,212 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
 
 # Proje
 ![Kontrol prototip](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Kontrol.jpg)
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+## English Section <a id="english-section"></a>
+
+
+# ESP32 Web Server and Motor Control Project ESP32 Codes
+
+## Project Summary
+
+- **Purpose**: Remotely control motors, measure distance and make a sound with a buzzer.
+- **Technologies Used**:
+- ESP32 Wi-Fi module
+- L298N motor driver
+- Ultrasonic distance sensor
+- Buzzer
+
+## How it works:
+It receives the information sent via web socket communication via Python code and processes this information and executes and processes the necessary command.
+
+## Hardware Requirements
+
+### Materials
+
+- 1 x ESP32 Development Board
+- 2 x L298N Motor Driver Board
+- 2 x DC Motor
+- 1 x Ultrasonic Distance Sensor (HC-SR04)
+- 1 x Buzzer
+- Jumper cables
+
+### Connections
+
+| Device | ESP32 Pin |
+|---------------------|-------------|
+| Right Motor Enable 1 | D8 |
+| Right Motor Enable 2 | D9 |
+| Right Motor In 1 | D6 |
+| Right Motor In 2 | D7 |
+| Left Motor Enable 1 | D13 |
+| Left Motor Enable 2 | D12 |
+| Left Motor In 1 | D14 |
+| Left Motor In 2 | D15 |
+| Top Motor Enable | D0 |
+| Top Motor In 1 | D1 |
+| Top Motor In 2 | D4 |
+| Ultrasonic Trig | D10 |
+| Ultrasonic Echo | D11 |
+| Buzzer | D5 |
+
+## Software Requirements
+
+- **Arduino IDE**: You must use an IDE that has the ESP32 libraries installed. [Download Arduino IDE](https://www.arduino.cc/en/software)
+
+## Setup
+
+1. **Wi-Fi Settings**: Edit the `ssid` and `password` variables according to your network:
+
+```cpp
+const char* ssid = "WifiName"; // Wi-Fi name
+const char* password = "Password"; // Wi-Fi password
+```
+
+2. **Install Libraries**:
+
+Make sure that the ESP32 and WebServer libraries are loaded.
+
+2. **Upload Code to ESP32**:
+
+Open the code in Arduino IDE and upload it to ESP32.
+
+3. **Open Serial Monitor**:
+
+Set the baud rate to 115200. The IP address will be displayed after the Wi-Fi connection is established.
+
+## Usage
+When the project is running, the ESP32 web server is started and users can control the motors via their web browsers.
+
+## Web Server
+The web server processes HTTP POST requests that send specific commands to ESP32. The commands are as follows:
+- LEFT: Sets the direction and speed of the left motor. ```LEFT(<rotation>,<speed>)```
+- RIGHT: Sets the direction and speed of the right motor. ```RIGHT(<rotation>,<speed>)```
+- BackAndForth: Moves both motors forward or backward. ```BackAndForth(<rotation>,<speed>)```
+- 2BackAndForth: Moves both motors forward or backward with separate powers. ```2BackAndForth(<rightMotorPwm>,<leftMotorPwm>,<rotation>)```
+
+- 3BackAndForth: Moves both motors separately forward or backward, with separate powers. ```3BackAndForth(<rightRotation>,<leftRotation>,<rightMotorPwm>,<leftMotorPwm>)```
+
+- G_Turn: Provides rotation movement by rotating the right and left motors in different directions. ```G_Turn(<rotation>,<speed>)```
+
+- Upper: Adjusts the direction and speed of the upper motor. ```Upper(<rotation>,<speed>)```
+
+- MEASURE: Measures distance with ultrasonic sensor. ```MEASURE()```
+- BUZZER: Makes melodic sound with buzzer. ```BUZZER()```
+
+## HTTP POST Request Examples
+- Left Motor Forward: LEFT,1,255 (1: Forward, 255: Maximum speed)
+- Right Motor Reverse: RIGHT,0,200 (0: Reverse, 200: Speed)
+- Forward-Backward Movement: BackAndForth,1,150 (Forward at 150 speed)
+- Distance Measurement: MEASURE
+
+## Buzzer Function
+The melody played with the buzzer is based on the note frequencies defined in the pitches.h file.
+
+The buzzer provides audio feedback to users with different melodies.
+
+***
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+# Prototype
+![Control prototype](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Kontrolc%C3%BC.gif)
+
+# ESP32 Web Server and Motor Control Project Python Codes (Controller)
+
+Controls motors via keyboard or joystick with an ESP-based system.
+Currently supported joystick is Logitech EXTREME 3D PRO.
+The project sends commands to the ESP device using `requests`, `keyboard`, `pygame`, and `threading` libraries.
+
+## Requirements
+
+To run this project, the following software and libraries must be installed:
+
+- Python 3.x
+- `requests` library
+- `keyboard` library
+- `pygame` library
+
+You can use the following commands to install the required libraries:
+
+```bash
+pip install requests
+pip install keyboard
+pip install pygame
+```
+
+## Functions
+
+### Motor Control Functions
+
+- control_left_motor(rotation, speed): Controls the left motor.
+- control_right_motor(rotation, speed): Controls the right motor.
+- back_and_forth(rotation, speed): Motor moves back and forth.
+- g_turn(rotation, speed): Turns the motor right or left.
+- control_upper_motor(rotation, speed): Controls the upper motor.
+- control_right_left_motor(right_motor_pwm, left_motor_pwm, rotation): Controls the right and left motors at the same time.
+- control_right_left_motor_with_rotations(right_motor_pwm, left_motor_pwm, RightRotation, LeftRotation): Controls the right and left motors in different directions and speeds.
+
+### Extra Functions
+- measure_distance(): Measures distance.
+- play_buzzer(): Plays the buzzer melody.
+
+## Motor Control with Keyboard
+* t: Forward movement.
+* s: Backward movement.
+* d: Left rotation.
+* a: Right rotation.
+* e: Starts the right motor.
+* q: Starts the left motor.
+* m: Measures distance.
+* b: Rings the buzzer.
+* r: Fast forward movement.
+* f: Stops the motor.
+* z: Exits the program.
+
+## Motor Control with Joystick
+Motor control can also be provided using the joystick.
+
+Commands can be sent to the motors using the joystick's axes and buttons.
+
+# Usage
+- 1 - Connect your ESP 32 and computer to the same network.
+- 2 - Edit the esp_ip and esp_port variables at the beginning of the code according to the IP address and port number of your ESP device.
+- 3 - Run the Esp32KontrolcuV3_With_joystick.py file
+- 4 - If you want to use a joystick, connect the joystick and replace the function in the Thread with control_motors_with_joystick.
+if you want to control from keyboard replace the function with control_motors_with_keyboard
+```bash
+if __name__ == '__main__:
+motor_thread = Thread(target=control_motors_with_joystick)
+motor_thread.start()
+motor_thread.join()
+```
+while the program is running you can control the motors with the joystick.
+
+# Joystick usage:
+You can determine the maximum speed of the vehicle with the throttle opening joystick located under the joystick arm.
+
+You can run the upper motor upwards with the number 1 button on it and downwards with the number 2 button.
+
+The more you push or pull the joystick forward, the more power you can send to the motors.
+
+You can make the device make a point turn from where it is by rotating the joystick on its own axis.
+
+![Logitech EXTREME 3D PRO JOYSTICK IMAGE](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Logitech%20Extreme%203D%20Pro.jpg) # Project ![Control prototype](https://github.com/12enes34/ESP32_With_Pyth on_Remotre_Control/blob/main/Control.jpg)
+
+
+
 
 
 
