@@ -175,7 +175,9 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
   
   Üzerinde bulunan 1 numaralı tuş ile upper motoru yukarı yönde çalıştırabilirsiniz 2 ile de aşşa yönde çalıştırabilirsiniz.
   
-  Joystick i ne kadar ileri iter veya geri çekerseniz motorlara o kadar çok güç gönderebilirsiniz.
+  Joystick'i ne kadar ileri iter veya geri çekerseniz motorlara o kadar çok güç gönderebilirsiniz.
+
+  Joystick'i kendi ekseninde döndürerek cihazın olduğu yerden nokta dönüşü yapabilmesini sağlayabilirsiniz.
 
 
 ![Logitech EXTREME 3D PRO JOYSTICK IMAGE](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Logitech%20Extreme%203D%20Pro.jpg)
