@@ -97,6 +97,11 @@ Buzzer, farklı melodilerle kullanıcılara sesli geri bildirim sağlar.
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+# Prototip
+![Kontrol prototip](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Kontrolc%C3%BC.gif)
+
+
+
 
  
 # ESP32 Web Server ve Motor Kontrol Projesi Python Kodları (Kontrolcü)
@@ -184,6 +189,8 @@ program çalışırken joystick ile motorları kontrol edebilirsiniz.
 
 
 
+# Proje
+![Kontrol prototip](https://github.com/12enes34/ESP32_With_Python_Remotre_Control/blob/main/Kontrol.jpg)
 
 
 
