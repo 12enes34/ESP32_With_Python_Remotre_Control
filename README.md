@@ -1,9 +1,11 @@
 # README in Two Languages: ESP32 Web Server and Motor Control Project ESP32 Codes
 
-- [Türkçe Bölüm](#turkce-bolum)
-- [English Section](#english-section)
+- [Türkçe](#turkce-bolum)
+- [English](#english-section)
 
-## Türkçe Bölüm <a id="turkce-bolum"></a>
+
+<h1 align="center" style="font-size: 62px;" id="turkce-bolum">TÜRKÇE</h1>
+
 # ESP32 Web Server ve Motor Kontrol Projesi ESP32 Kodları
 
 ## Proje Özeti
