@@ -93,14 +93,10 @@
 Buzzer ile çalınan melodi, pitches.h dosyasında tanımlanan nota frekanslarına dayanmaktadır. 
 Buzzer, farklı melodilerle kullanıcılara sesli geri bildirim sağlar.
 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 ***
-
-
-
-
-
-
-
  
 # ESP32 Web Server ve Motor Kontrol Projesi Python Kodları (Kontrolcü)
 
@@ -129,33 +125,32 @@ pip install pygame
 
   ### Motor Kontrol Fonksiyonları
   
-    - control_left_motor(rotation, speed): Sol motoru kontrol eder.
-    - control_right_motor(rotation, speed): Sağ motoru kontrol eder.
-    - back_and_forth(rotation, speed): Motoru ileri geri hareket ettirir.
-    - g_turn(rotation, speed): Motoru sağa veya sola döndürür.
-    - control_upper_motor(rotation, speed): Üst motoru kontrol eder.
-    - control_right_left_motor(right_motor_pwm, left_motor_pwm, rotation): Sağ ve sol motorları aynı anda kontrol eder.
-    - control_right_left_motor_with_rotations(right_motor_pwm, left_motor_pwm, RightRotation, LeftRotation): Sağ ve sol motorları farklı yön ve hızlarda kontrol eder.
+  - control_left_motor(rotation, speed): Sol motoru kontrol eder.
+  - control_right_motor(rotation, speed): Sağ motoru kontrol eder.
+  - back_and_forth(rotation, speed): Motoru ileri geri hareket ettirir.
+  - g_turn(rotation, speed): Motoru sağa veya sola döndürür.
+  - control_upper_motor(rotation, speed): Üst motoru kontrol eder.
+  - control_right_left_motor(right_motor_pwm, left_motor_pwm, rotation): Sağ ve sol motorları aynı anda kontrol eder.
+  - control_right_left_motor_with_rotations(right_motor_pwm, left_motor_pwm, RightRotation, LeftRotation): Sağ ve sol motorları farklı yön ve hızlarda kontrol eder.
 
 
 ### Ekstra Fonksiyonlar
-    - measure_distance(): Mesafe ölçümü yapar.
-    - play_buzzer(): Buzzer melodisini çaldırır.
-
+  - measure_distance(): Mesafe ölçümü yapar.
+  - play_buzzer(): Buzzer melodisini çaldırır.
 
 ## Klavye ile Motor Kontrolü
-    - t: İleri hareket.
-    - s: Geri hareket.
-    - d: Sol dönüş.
-    - a: Sağ dönüş.
-    - e: Sağ motoru çalıştırır.
-    - q: Sol motoru çalıştırır.
-    - m: Mesafe ölçümü yapar.
-    - b: Buzzer'ı çaldırır.
-    - r: İleri hızlı hareket.
-    - f: Motoru durdurur.
-    - z: Programdan çıkar. 
-
+* t: İleri hareket.
+* s: Geri hareket.
+* d: Sol dönüş.
+* a: Sağ dönüş.
+* e: Sağ motoru çalıştırır.
+* q: Sol motoru çalıştırır.
+* m: Mesafe ölçümü yapar.
+* b: Buzzer'ı çaldırır.
+* r: İleri hızlı hareket.
+* f: Motoru durdurur.
+* z: Programdan çıkar.
+  
 ## Joystick ile Motor Kontrolü
 Joystick kullanılarak motor kontrolü de sağlanabilir. 
 Joystick'in eksen ve butonları kullanılarak motorlara komut gönderilebilir.
