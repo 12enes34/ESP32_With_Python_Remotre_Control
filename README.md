@@ -17,7 +17,7 @@
 ### Malzemeler
 
 - 1 x ESP32 Geliştirme Kartı
-- 1 x L298N Motor Sürücü Kartı
+- 2 x L298N Motor Sürücü Kartı
 - 2 x DC Motor
 - 1 x Ultrasonik Mesafe Sensörü (HC-SR04)
 - 1 x Buzzer
