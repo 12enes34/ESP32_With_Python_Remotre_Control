@@ -93,10 +93,11 @@
 Buzzer ile çalınan melodi, pitches.h dosyasında tanımlanan nota frekanslarına dayanmaktadır. 
 Buzzer, farklı melodilerle kullanıcılara sesli geri bildirim sağlar.
 
+***
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-***
+
  
 # ESP32 Web Server ve Motor Kontrol Projesi Python Kodları (Kontrolcü)
 
